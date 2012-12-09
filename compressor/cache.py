@@ -25,7 +25,7 @@ def get_hexdigest(plaintext, length=None):
 
 
 def simple_cachekey(key):
-    return 'django_compressor.%s' % smart_str(key)
+    return settings.COMPRESS_SIMPLE_CACHE_KEY % smart_str(key)
 
 
 def socket_cachekey(key):

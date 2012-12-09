@@ -47,6 +47,7 @@ class CompressorConf(AppConf):
     CACHE_BACKEND = None
     # the dotted path to the function that creates the cache key
     CACHE_KEY_FUNCTION = 'compressor.cache.simple_cachekey'
+    SIMPLE_CACHE_KEY = 'django_compressor.%s'
     # rebuilds the cache every 30 days if nothing has changed.
     REBUILD_TIMEOUT = 60 * 60 * 24 * 30  # 30 days
     # the upper bound on how long any compression should take to be generated
